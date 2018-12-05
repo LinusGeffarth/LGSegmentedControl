@@ -1,0 +1,16 @@
+PODS:
+  - LGSegmentedControl (0.1.0)
+
+DEPENDENCIES:
+  - LGSegmentedControl (from `../`)
+
+EXTERNAL SOURCES:
+  LGSegmentedControl:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  LGSegmentedControl: 1dce4c990d4e250d84a24219670dbc9023c9c3bc
+
+PODFILE CHECKSUM: ec1ac30586443fa7172476c0771f6dfb8c6b57b1
+
+COCOAPODS: 1.5.3

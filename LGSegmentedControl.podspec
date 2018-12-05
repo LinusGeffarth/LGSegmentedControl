@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LGSegmentedControl'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of LGSegmentedControl.'
+  s.version          = '1.0.0'
+  s.summary          = 'A prettier and highly customizable UISegmentedControl'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -24,19 +24,14 @@ TODO: Add long description of the pod here.
   s.homepage         = 'https://github.com/linusgeffarth/LGSegmentedControl'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'linusgeffarth' => 'linus@geffarth.de' }
+  s.author           = { 'linusgeffarth' => 'linus@geffarth.com' }
   s.source           = { :git => 'https://github.com/linusgeffarth/LGSegmentedControl.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.social_media_url = 'https://twitter.com/linusgeffarth'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
 
   s.source_files = 'LGSegmentedControl/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'LGSegmentedControl' => ['LGSegmentedControl/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.frameworks = 'UIKit'
+  
 end

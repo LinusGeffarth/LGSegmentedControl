@@ -1,0 +1,6 @@
+framework module LGSegmentedControl {
+  umbrella header "LGSegmentedControl-umbrella.h"
+
+  export *
+  module * { export * }
+}

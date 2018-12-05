@@ -1,0 +1,22 @@
+{
+  "name": "LGSegmentedControl",
+  "version": "0.1.0",
+  "summary": "A short description of LGSegmentedControl.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/linusgeffarth/LGSegmentedControl",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "linusgeffarth": "linus@geffarth.de"
+  },
+  "source": {
+    "git": "https://github.com/linusgeffarth/LGSegmentedControl.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "LGSegmentedControl/Classes/**/*"
+}
