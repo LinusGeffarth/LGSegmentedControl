@@ -23,6 +23,7 @@ class LGSegmentedControl: UIControl, LGSegmentDelegate {
     private var stackView: UIStackView = {
         let stackView = UIStackView(frame: CGRect(x: 0, y: 0, width: 150, height: 50))
         stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.spacing = 8
         return stackView
     }()
     
@@ -134,12 +135,6 @@ class LGSegmentedControl: UIControl, LGSegmentDelegate {
         }
     }
     
-//    public override var backgroundColor: UIColor? {
-//        didSet {
-//            contentView.backgroundColor = backgroundColor
-//        }
-//    }
-    
     @IBInspectable
     private var segmentTitles: String {
         get {
@@ -154,11 +149,13 @@ class LGSegmentedControl: UIControl, LGSegmentDelegate {
     }
     // private b/c only used for interface builder
     // `distribution` actually handles the setting
+    /// StackView distribution, may be changed to suit different segment title lengths, default: .fillEqually
     @IBInspectable
     private var stackViewDistribution: String {
         get { return distribution.string }
         set { distribution = UIStackView.Distribution(newValue) ?? .fillEqually }
     }
+    /// StackView spacing, default: 8
     @IBInspectable
     public var spacing: CGFloat {
         get { return stackView.spacing }
@@ -169,31 +166,37 @@ class LGSegmentedControl: UIControl, LGSegmentDelegate {
         get { return contentView.backgroundColor }
         set { contentView.backgroundColor = newValue }
     }
+    /// Segments' corner radius, default: 6
     @IBInspectable
     public var segmentsCornerRadius: CGFloat {
         get { return options.cornerRadius }
         set { options.cornerRadius = newValue; updateAppearance() }
     }
+    /// Determines whether there should be a short fade animation when selecting a segment, default: true
     @IBInspectable
     public var animateStateChange: Bool {
         get { return options.animateStateChange }
         set { options.animateStateChange = newValue; updateAppearance() }
     }
+    /// Background color of the selected segment, default: .blue-ish (#389FF9)
     @IBInspectable
     public var selectedBackgroundColor: UIColor {
         get { return options.selectedColor.background }
         set { options.selectedColor.background = newValue; updateAppearance() }
     }
+    /// Text color of the selected segment, default: .white
     @IBInspectable
     public var selectedTextColor: UIColor {
         get { return options.selectedColor.text }
         set { options.selectedColor.text = newValue; updateAppearance() }
     }
+    /// Background color of the selected segment, default: .clear
     @IBInspectable
     public var deselectedBackgroundColor: UIColor {
         get { return options.deselectedColor.background }
         set { options.deselectedColor.background = newValue; updateAppearance() }
     }
+    /// Text color of the selected segment, default: .black
     @IBInspectable
     public var deselectedTextColor: UIColor {
         get { return options.deselectedColor.text }
