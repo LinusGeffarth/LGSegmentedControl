@@ -5,9 +5,9 @@
 [![License](https://img.shields.io/cocoapods/l/LGSegmentedControl.svg?style=flat)](https://cocoapods.org/pods/LGSegmentedControl)
 [![Platform](https://img.shields.io/cocoapods/p/LGSegmentedControl.svg?style=flat)](https://cocoapods.org/pods/LGSegmentedControl)
 
-## Example
+`LGSegmentedControl` is a highly customizable and therefor prettier version of `UISegmentedControl`.
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+<img src="https://github.com/LinusGeffarth/LGSegmentedControl/blob/master/screenshots/ss4.jpeg" height="400"/>
 
 ## Requirements
 
