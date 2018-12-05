@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'LGSegmentedControl_Example' do
+  pod 'LGSegmentedControl', :path => '../'
+
+  target 'LGSegmentedControl_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
