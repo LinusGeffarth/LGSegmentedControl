@@ -13,10 +13,10 @@
 		719854E49ACAC0DB25050BC381E5D4DF /* Pods-LGSegmentedControl_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CCD14820F0887023AB008C9D176FC79 /* Pods-LGSegmentedControl_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		747F87E7C785490E5D96F5C2464AFF87 /* Pods-LGSegmentedControl_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 54DB9BD5677E33322983DAA71C0A3624 /* Pods-LGSegmentedControl_Tests-dummy.m */; };
 		7EA0E021B620CCC9864BF57E0973CC91 /* Pods-LGSegmentedControl_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 70E815F69349D05F7E28F0FA01BEDADA /* Pods-LGSegmentedControl_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		881D99B721B8410100E7C951 /* LGSegmentOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881D99B621B8410100E7C951 /* LGSegmentOptions.swift */; };
 		88474D6421B7EDE600C99DB9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88474D5F21B7EDE600C99DB9 /* Extensions.swift */; };
 		88474D6521B7EDE600C99DB9 /* LGSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88474D6021B7EDE600C99DB9 /* LGSegment.swift */; };
 		88474D6621B7EDE600C99DB9 /* LGSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88474D6221B7EDE600C99DB9 /* LGSegmentedControl.swift */; };
-		88474D6721B7EDE600C99DB9 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88474D6321B7EDE600C99DB9 /* Defaults.swift */; };
 		D9074A89EA20F5AEF6D21CD6D8BACA5F /* Pods-LGSegmentedControl_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1962B78B1B7039749E50C6B252008604 /* Pods-LGSegmentedControl_Example-dummy.m */; };
 		DF95D93E2F73ABCFB0E7E071E0EEF6B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		F1083240C9E27E9ED057D79681E176BE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
@@ -57,10 +57,10 @@
 		5EB870FCEBE0CD9A334A21D4D82F4FB1 /* LGSegmentedControl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LGSegmentedControl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		70E815F69349D05F7E28F0FA01BEDADA /* Pods-LGSegmentedControl_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LGSegmentedControl_Example-umbrella.h"; sourceTree = "<group>"; };
 		71E21A35DA8C41BC1044AD0CD6FD5C8F /* Pods-LGSegmentedControl_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-LGSegmentedControl_Example.modulemap"; sourceTree = "<group>"; };
+		881D99B621B8410100E7C951 /* LGSegmentOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LGSegmentOptions.swift; path = LGSegmentedControl/Classes/LGSegmentOptions.swift; sourceTree = "<group>"; };
 		88474D5F21B7EDE600C99DB9 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = LGSegmentedControl/Classes/Extensions.swift; sourceTree = "<group>"; };
 		88474D6021B7EDE600C99DB9 /* LGSegment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LGSegment.swift; path = LGSegmentedControl/Classes/LGSegment.swift; sourceTree = "<group>"; };
 		88474D6221B7EDE600C99DB9 /* LGSegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LGSegmentedControl.swift; path = LGSegmentedControl/Classes/LGSegmentedControl.swift; sourceTree = "<group>"; };
-		88474D6321B7EDE600C99DB9 /* Defaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Defaults.swift; path = LGSegmentedControl/Classes/Defaults.swift; sourceTree = "<group>"; };
 		8CCD14820F0887023AB008C9D176FC79 /* Pods-LGSegmentedControl_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LGSegmentedControl_Tests-umbrella.h"; sourceTree = "<group>"; };
 		92A568D5BDA2C29CFF2FB7F6F76487D1 /* Pods-LGSegmentedControl_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LGSegmentedControl_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -112,8 +112,8 @@
 			isa = PBXGroup;
 			children = (
 				88474D5F21B7EDE600C99DB9 /* Extensions.swift */,
-				88474D6321B7EDE600C99DB9 /* Defaults.swift */,
 				88474D6021B7EDE600C99DB9 /* LGSegment.swift */,
+				881D99B621B8410100E7C951 /* LGSegmentOptions.swift */,
 				88474D6221B7EDE600C99DB9 /* LGSegmentedControl.swift */,
 				43CA6FD9C0F5D1706DF432FF510039CD /* Pod */,
 				BBC9CCDFE83B087885C200E681A97B75 /* Support Files */,
@@ -365,11 +365,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				88474D6721B7EDE600C99DB9 /* Defaults.swift in Sources */,
 				88474D6421B7EDE600C99DB9 /* Extensions.swift in Sources */,
 				88474D6621B7EDE600C99DB9 /* LGSegmentedControl.swift in Sources */,
 				033E9F5B24EF8780DB75EC5E5BA9832E /* LGSegmentedControl-dummy.m in Sources */,
 				88474D6521B7EDE600C99DB9 /* LGSegment.swift in Sources */,
+				881D99B721B8410100E7C951 /* LGSegmentOptions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

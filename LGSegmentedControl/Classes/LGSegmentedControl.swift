@@ -11,7 +11,7 @@ protocol LGSegmentDelegate {
     func didSelect(_ segment: LGSegment)
 }
 @IBDesignable public
-class LGSegmentedControl: UIView, LGSegmentDelegate {
+class LGSegmentedControl: UIControl, LGSegmentDelegate {
     
     // MARK: - Outlet Connections
     
@@ -27,6 +27,14 @@ class LGSegmentedControl: UIView, LGSegmentDelegate {
     }()
     
     // MARK: - Properties
+    
+    private let options = LGSegmentOptions()
+    
+    public override var isEnabled: Bool {
+        didSet {
+            self.alpha = isEnabled ? 1 : 0.7
+        }
+    }
     
     /// Segments in the control
     public var segments: [LGSegment] = [] {
@@ -52,11 +60,10 @@ class LGSegmentedControl: UIView, LGSegmentDelegate {
         set { updateSelection(for: newValue) }
         get { return segments.firstIndex(where: { $0.state == .selected }) }
     }
-    
-    public var distribution: UIStackView.Distribution = .fillEqually {
-        didSet {
-            stackView.distribution = distribution
-        }
+    /// The currently selected segment. `nil`, if no segment is selected
+    public var selectedSegment: LGSegment? {
+        guard let index = selectedIndex else { return nil }
+        return segments[safe: index]
     }
     
     // MARK: - Setup
@@ -92,7 +99,7 @@ class LGSegmentedControl: UIView, LGSegmentDelegate {
     
     // MARK: - UI
     
-    func updateSelection(for index: Int?, animated: Bool? = nil) {
+    private func updateSelection(for index: Int?, animated: Bool? = nil) {
         // do nothing when the same segment is tapped
         // to prevent seemingly "buggy" animations
         guard index != previousSelectedIndex else { return }
@@ -109,18 +116,29 @@ class LGSegmentedControl: UIView, LGSegmentDelegate {
         segment.set(state: .selected, animated: animated)
     }
     
-    func updateAppearance(animated: Bool? = nil) {
-        segments.forEach { $0.updateAppearance(animated: animated) }
+    fileprivate func updateAppearance(animated: Bool? = nil) {
+        segments.forEach { $0.updateAppearance(with: options, animated: animated) }
     }
     
     func didSelect(_ segment: LGSegment) {
+        guard isEnabled else { return }
         selectedIndex = segments.index(of: segment)
+        sendActions(for: .valueChanged)
     }
-}
-
-// MARK: - IBInspectables
-
-extension LGSegmentedControl {
+    
+    // MARK: - Customization & IBInspectables
+    
+    public var distribution: UIStackView.Distribution = .fillEqually {
+        didSet {
+            stackView.distribution = distribution
+        }
+    }
+    
+//    public override var backgroundColor: UIColor? {
+//        didSet {
+//            contentView.backgroundColor = backgroundColor
+//        }
+//    }
     
     @IBInspectable
     private var segmentTitles: String {
@@ -134,47 +152,51 @@ extension LGSegmentedControl {
             segments = titles.map { LGSegment(title: $0) }
         }
     }
-    
+    // private b/c only used for interface builder
+    // `distribution` actually handles the setting
     @IBInspectable
     private var stackViewDistribution: String {
         get { return distribution.string }
         set { distribution = UIStackView.Distribution(newValue) ?? .fillEqually }
     }
-    
     @IBInspectable
     public var spacing: CGFloat {
         get { return stackView.spacing }
         set { stackView.spacing = newValue }
     }
-    
+    @IBInspectable
+    override public var backgroundColor: UIColor? {
+        get { return contentView.backgroundColor }
+        set { contentView.backgroundColor = newValue }
+    }
     @IBInspectable
     public var segmentsCornerRadius: CGFloat {
-        get { return _segmentsCornerRadius }
-        set { _segmentsCornerRadius = newValue; updateAppearance() }
+        get { return options.cornerRadius }
+        set { options.cornerRadius = newValue; updateAppearance() }
     }
     @IBInspectable
     public var animateStateChange: Bool {
-        get { return _animateStateChange }
-        set { _animateStateChange = newValue; updateAppearance() }
+        get { return options.animateStateChange }
+        set { options.animateStateChange = newValue; updateAppearance() }
     }
     @IBInspectable
     public var selectedBackgroundColor: UIColor {
-        get { return _selectedColor.background }
-        set { _selectedColor.background = newValue; updateAppearance() }
+        get { return options.selectedColor.background }
+        set { options.selectedColor.background = newValue; updateAppearance() }
     }
     @IBInspectable
     public var selectedTextColor: UIColor {
-        get { return _selectedColor.text }
-        set { _selectedColor.text = newValue; updateAppearance() }
+        get { return options.selectedColor.text }
+        set { options.selectedColor.text = newValue; updateAppearance() }
     }
     @IBInspectable
     public var deselectedBackgroundColor: UIColor {
-        get { return _deselectedColor.background }
-        set { _deselectedColor.background = newValue; updateAppearance() }
+        get { return options.deselectedColor.background }
+        set { options.deselectedColor.background = newValue; updateAppearance() }
     }
     @IBInspectable
     public var deselectedTextColor: UIColor {
-        get { return _deselectedColor.text }
-        set { _deselectedColor.text = newValue; updateAppearance() }
+        get { return options.deselectedColor.text }
+        set { options.deselectedColor.text = newValue; updateAppearance() }
     }
 }

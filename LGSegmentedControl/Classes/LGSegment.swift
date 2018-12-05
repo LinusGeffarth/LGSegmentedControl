@@ -48,12 +48,14 @@ class LGSegment {
         }
     }
     
+    var options = LGSegmentOptions()
+    
     var delegate: LGSegmentDelegate?
     
     public init(title: String) {
         self.title = title
         
-        updateAppearance(animated: false)
+        updateAppearance(with: options, animated: false)
         
         setupConstraints()
     }
@@ -79,14 +81,15 @@ class LGSegment {
         contentView.layoutIfNeeded()
     }
     
-    func updateAppearance(animated: Bool? = nil) {
-        UIView.animate(withDuration: animated ?? _animateStateChange ? 0.1 : 0) {
+    func updateAppearance(with options: LGSegmentOptions, animated: Bool? = nil) {
+        self.options = options
+        UIView.animate(withDuration: animated ?? options.animateStateChange ? 0.1 : 0) {
             // status-related
-            self.titleLabel.textColor = self.state.labelColor
-            self.backgroundView.backgroundColor = self.state.backgroundColor
+            self.titleLabel.textColor = self.textColor
+            self.backgroundView.backgroundColor = self.backgroundColor
             // others
-            self.backgroundView.layer.cornerRadius = _segmentsCornerRadius
-            self.titleLabel.font = _font
+            self.backgroundView.layer.cornerRadius = options.cornerRadius
+            self.titleLabel.font = options.font
         }
     }
     
@@ -96,7 +99,7 @@ class LGSegment {
     
     public func set(state: State, animated: Bool? = nil) {
         self._state = state
-        updateAppearance(animated: animated)
+        updateAppearance(with: options, animated: animated)
     }
 }
 
@@ -104,26 +107,26 @@ extension LGSegment: Equatable {
     public enum State {
         case selected
         case deselected
-        
-        var labelColor: UIColor {
-            switch self {
-            case .selected:
-                return _selectedColor.text
-            case .deselected:
-                return _deselectedColor.text
-            }
-        }
-        
-        var backgroundColor: UIColor {
-            switch self {
-            case .selected:
-                return _selectedColor.background
-            case .deselected:
-                return _deselectedColor.background
-            }
+    }
+    
+    var textColor: UIColor {
+        switch self.state {
+        case .selected:
+            return options.selectedColor.text
+        case .deselected:
+            return options.deselectedColor.text
         }
     }
     
+    var backgroundColor: UIColor {
+        switch self.state {
+        case .selected:
+            return options.selectedColor.background
+        case .deselected:
+            return options.deselectedColor.background
+        }
+    }
+
     public static func == (lhs: LGSegment, rhs: LGSegment) -> Bool {
         return lhs.contentView == rhs.contentView
     }
