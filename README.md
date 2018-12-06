@@ -40,31 +40,39 @@ Then, create an `@IBAction` in your view controller and link to it using the `va
 
 Instantiate a new view:
 
-    let control = LGSegmentedControl(frame: CGRect(x: 50, y: 50, width: 100, height: 30))
-    view.addSubview(control)
+```swift
+let control = LGSegmentedControl(frame: CGRect(x: 50, y: 50, width: 100, height: 30))
+view.addSubview(control)
+```
 
 ...then add the segments data:
 
-    control.segments = [
-        LGSegment(title: "1 day"),
-        LGSegment(title: "3 weeks"),
-        LGSegment(title: "2 months"),
-        LGSegment(title: "Quarter")
-    ]
-    
+```swift
+control.segments = [
+    LGSegment(title: "1 day"),
+    LGSegment(title: "3 weeks"),
+    LGSegment(title: "2 months"),
+    LGSegment(title: "Quarter")
+]
+```
+
 Lastly, define the selected segment:
 
-    control.selectedIndex = 1 // selects: "3 weeks"
-    
+```swift
+control.selectedIndex = 1 // selects: "3 weeks"
+```
+
 To track user interaction, add a target and link to a method in your view controller using the `.valueChanged` action:
 
-    control.addTarget(self, action: #selector(selectedSegment(_:)), for: .valueChanged)
-    
-    @objc func selectedSegment(_ segmentedControl: LGSegmentedControl) {
-        // selectedSegment may be nil, if selectedIndex was set to nil (and hence none was selected)
-        guard let segment = segmentedControl.selectedSegment else { return }
-        let title = segment.title // ex: "3 weeks"
-    }
+```swift
+control.addTarget(self, action: #selector(selectedSegment(_:)), for: .valueChanged)
+
+@objc func selectedSegment(_ segmentedControl: LGSegmentedControl) {
+    // selectedSegment may be nil, if selectedIndex was set to nil (and hence none was selected)
+    guard let segment = segmentedControl.selectedSegment else { return }
+    let title = segment.title // ex: "3 weeks"
+}
+```
 
 ## Customization
 
@@ -88,7 +96,7 @@ public var distribution: UIStackView.Distribution
 @IBInspectable public var segmentsCornerRadius: CGFloat
 
 // Determines whether there should be a short fade animation when selecting a segment
-// defautl: true
+// default: true
 @IBInspectable public var animateStateChange: Bool
 
 // Background color of the selected segment
