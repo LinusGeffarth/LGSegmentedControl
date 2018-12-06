@@ -22,7 +22,7 @@ LGSegmentedControl is a highly customizable and therefor prettier version of UIS
                        DESC
 
   s.homepage         = 'https://github.com/linusgeffarth/LGSegmentedControl'
-  s.screenshots      = 'https://github.com/LinusGeffarth/LGSegmentedControl/blob/master/screenshots/ss4.jpeg', 'https://github.com/LinusGeffarth/LGSegmentedControl/blob/master/screenshots/ss1.png', 'https://github.com/LinusGeffarth/LGSegmentedControl/blob/master/screenshots/ss2.png', 'https://github.com/LinusGeffarth/LGSegmentedControl/blob/master/screenshots/ss3.png'
+  s.screenshots      = 'https://raw.githubusercontent.com/LinusGeffarth/LGSegmentedControl/master/screenshots/ss4.jpeg', 'https://raw.githubusercontent.com/LinusGeffarth/LGSegmentedControl/master/screenshots/ss1.png', 'https://raw.githubusercontent.com/LinusGeffarth/LGSegmentedControl/master/screenshots/ss2.png', 'https://raw.githubusercontent.com/LinusGeffarth/LGSegmentedControl/master/screenshots/ss3.png'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'linusgeffarth' => 'linus@geffarth.com' }
   s.source           = { :git => 'https://github.com/linusgeffarth/LGSegmentedControl.git', :tag => s.version.to_s }
