@@ -70,41 +70,43 @@ To track user interaction, add a target and link to a method in your view contro
 
 You can customize many aspects of your control:
 
-    // StackView distribution, may be changed to suit different segment title lengths
-    // default: .fillEqually
-    public var distribution: UIStackView.Distribution
-    
-    // StackView spacing
-    // default: 8
-    @IBInspectable public var spacing: CGFloat
+```swift
+// StackView distribution, may be changed to suit different segment title lengths
+// default: .fillEqually
+public var distribution: UIStackView.Distribution
 
-    // Background color of the whole segment
-    // default: .clear
-    @IBInspectable override public var backgroundColor: UIColor?
+// StackView spacing
+// default: 8
+@IBInspectable public var spacing: CGFloat
 
-    // Corner radius of the segments
-    // default: 6
-    @IBInspectable public var segmentsCornerRadius: CGFloat
+// Background color of the whole segment
+// default: .clear
+@IBInspectable override public var backgroundColor: UIColor?
 
-    // Determines whether there should be a short fade animation when selecting a segment
-    // defautl: true
-    @IBInspectable public var animateStateChange: Bool
+// Corner radius of the segments
+// default: 6
+@IBInspectable public var segmentsCornerRadius: CGFloat
 
-    // Background color of the selected segment
-    // default: .blue-ish (#389FF9)
-    @IBInspectable public var selectedBackgroundColor: UIColor
+// Determines whether there should be a short fade animation when selecting a segment
+// defautl: true
+@IBInspectable public var animateStateChange: Bool
 
-    // Text color of the selected segment
-    // default: .white
-    @IBInspectable public var selectedTextColor: UIColor
+// Background color of the selected segment
+// default: .blue-ish (#389FF9)
+@IBInspectable public var selectedBackgroundColor: UIColor
 
-    // Background color of the deselected segment
-    // default: .clear
-    @IBInspectable public var deselectedBackgroundColor: UIColor
+// Text color of the selected segment
+// default: .white
+@IBInspectable public var selectedTextColor: UIColor
 
-    // Text color of the deselected segment
-    // default: .black
-    @IBInspectable public var deselectedTextColor: UIColor
+// Background color of the deselected segment
+// default: .clear
+@IBInspectable public var deselectedBackgroundColor: UIColor
+
+// Text color of the deselected segment
+// default: .black
+@IBInspectable public var deselectedTextColor: UIColor
+```
 
 There are many different ways to style a control with given options, here is a few examples:
 
