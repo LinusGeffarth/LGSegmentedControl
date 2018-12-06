@@ -79,8 +79,8 @@ control.addTarget(self, action: #selector(selectedSegment(_:)), for: .valueChang
 You can customize many aspects of your control:
 
 ```swift
-// StackView distribution, may be changed to suit different segment title lengths
-// default: .fillEqually
+// StackView distribution, set to .fill to have each segment be as wide as required; set to .fillEqually, to have all segments be the same width
+// default: .fill
 public var distribution: UIStackView.Distribution
 
 // StackView spacing
