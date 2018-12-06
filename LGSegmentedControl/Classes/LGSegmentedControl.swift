@@ -45,7 +45,7 @@ class LGSegmentedControl: UIControl, LGSegmentDelegate {
         didSet {
             segments.forEach { $0.delegate = self }
             // remove all other segments
-            stackView.arrangedSubviews.forEach { stackView.removeArrangedSubview($0) }
+            stackView.removeAllArrangedSubviews()
             // add all new segments
             stackView.add(arrangedSubviews: segments.map { $0.contentView })
             // reset previous selected index, b/c we're starting over with a new set of segments
@@ -75,7 +75,6 @@ class LGSegmentedControl: UIControl, LGSegmentDelegate {
     private func commonInit() {
         addSubview(contentView)
         contentView.frame = bounds
-//        contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         contentView.translatesAutoresizingMaskIntoConstraints = false
         
         setupConstraints()
@@ -94,15 +93,15 @@ class LGSegmentedControl: UIControl, LGSegmentDelegate {
     private func setupConstraints() {
         contentView.addSubview(stackView)
         
-        stackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
-        stackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
-        stackView.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
-        stackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
-        
         contentView.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
         contentView.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
         contentView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
         contentView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        
+        stackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
+        stackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
+        stackView.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
+        stackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
         
         self.layoutIfNeeded()
     }

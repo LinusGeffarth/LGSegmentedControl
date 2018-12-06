@@ -27,13 +27,12 @@ class ViewController: UIViewController {
         
         segmentedControl.deselectedBackgroundColor = #colorLiteral(red: 0.2196078431, green: 0.6235294118, blue: 0.9764705882, alpha: 0.15)
         segmentedControl.deselectedTextColor = .darkText
-                
+        
         // data source
         segmentedControl.segments = [
             LGSegment(title: "1 day"),
             LGSegment(title: "3 weeks"),
-            LGSegment(title: "2 months"),
-            LGSegment(title: "Quarter")
+            LGSegment(title: "2 months")
         ]
         // make sure to set the selected index AFTER assigning the segments
         segmentedControl.selectedIndex = 1

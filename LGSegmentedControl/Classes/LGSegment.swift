@@ -17,6 +17,7 @@ class LGSegment {
     }()
     var titleLabel: UILabel = {
         let label = UILabel()
+        label.textAlignment = .center
         label.sizeToFit()
         label.translatesAutoresizingMaskIntoConstraints = false
         return label

@@ -113,8 +113,8 @@
 			children = (
 				88474D5F21B7EDE600C99DB9 /* Extensions.swift */,
 				88474D6021B7EDE600C99DB9 /* LGSegment.swift */,
-				881D99B621B8410100E7C951 /* LGSegmentOptions.swift */,
 				88474D6221B7EDE600C99DB9 /* LGSegmentedControl.swift */,
+				881D99B621B8410100E7C951 /* LGSegmentOptions.swift */,
 				43CA6FD9C0F5D1706DF432FF510039CD /* Pod */,
 				BBC9CCDFE83B087885C200E681A97B75 /* Support Files */,
 			);
