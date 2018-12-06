@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LGSegmentedControl'
-  s.version          = '1.0.1'
+  s.version          = '1.1'
   s.summary          = 'A prettier and highly customizable UISegmentedControl'
 
 # This description is used to generate tags and improve search results.
@@ -18,11 +18,11 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+LGSegmentedControl is a highly customizable and therefor prettier version of UISegmentedControl.
                        DESC
 
   s.homepage         = 'https://github.com/linusgeffarth/LGSegmentedControl'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  s.screenshots      = 'https://github.com/LinusGeffarth/LGSegmentedControl/blob/master/screenshots/ss4.jpeg', 'https://github.com/LinusGeffarth/LGSegmentedControl/blob/master/screenshots/ss1.png', 'https://github.com/LinusGeffarth/LGSegmentedControl/blob/master/screenshots/ss2.png', 'https://github.com/LinusGeffarth/LGSegmentedControl/blob/master/screenshots/ss3.png'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'linusgeffarth' => 'linus@geffarth.com' }
   s.source           = { :git => 'https://github.com/linusgeffarth/LGSegmentedControl.git', :tag => s.version.to_s }

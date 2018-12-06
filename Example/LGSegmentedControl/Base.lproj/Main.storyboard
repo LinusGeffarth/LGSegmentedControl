@@ -12,6 +12,7 @@
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="LGSegmentedControl_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
@@ -21,156 +22,175 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="7BS-tA-t3o">
-                                <rect key="frame" x="16" y="209.5" width="343" height="248"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wxO-Hk-1D2" customClass="LGSegmentedControl" customModule="LGSegmentedControl">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="32"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="32" id="6jt-LX-3TX"/>
-                                        </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="initialSelectedIndex">
-                                                <integer key="value" value="2"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="segmentTitles" value="1 day, 2 weeks, 3 months, Quarter"/>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="stackViewDistribution" value="fillEqually"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="spacing">
-                                                <real key="value" value="8"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="segmentsCornerRadius">
-                                                <real key="value" value="8"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="selectedBackgroundColor">
-                                                <color key="value" red="0.18039215689999999" green="0.54117647059999996" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="selectedTextColor">
-                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="deselectedBackgroundColor">
-                                                <color key="value" red="0.1803921568627451" green="0.54117647058823526" blue="0.96862745098039216" alpha="0.30115582191780821" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="deselectedTextColor">
-                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EhA-dT-GKF" customClass="LGSegmentedControl" customModule="LGSegmentedControl">
-                                        <rect key="frame" x="0.0" y="72" width="343" height="32"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="32" id="a7h-Kw-L4s"/>
-                                        </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="initialSelectedIndex">
-                                                <integer key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="segmentTitles" value="1 day, 2 weeks, 3 months, 1 year"/>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="stackViewDistribution" value="fillEqually"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="spacing">
-                                                <real key="value" value="8"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="segmentsCornerRadius">
-                                                <real key="value" value="8"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="selectedBackgroundColor">
-                                                <color key="value" red="0.18823529410000001" green="0.30196078430000001" blue="0.42745098040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="selectedTextColor">
-                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="deselectedBackgroundColor">
-                                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="deselectedTextColor">
-                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iSg-iV-pxF" customClass="LGSegmentedControl" customModule="LGSegmentedControl">
-                                        <rect key="frame" x="0.0" y="144" width="343" height="32"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="32" id="TKP-Bc-1WO"/>
-                                        </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="initialSelectedIndex">
-                                                <integer key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="segmentTitles" value="1 day, 2 weeks"/>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="stackViewDistribution" value="fillEqually"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="spacing">
-                                                <real key="value" value="8"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="segmentsCornerRadius">
-                                                <real key="value" value="8"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="selectedBackgroundColor">
-                                                <color key="value" red="0.10196078431372549" green="0.73725490196078436" blue="0.61176470588235299" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="selectedTextColor">
-                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="deselectedBackgroundColor">
-                                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="deselectedTextColor">
-                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7JB-4I-fYi" customClass="LGSegmentedControl" customModule="LGSegmentedControl">
-                                        <rect key="frame" x="0.0" y="216" width="343" height="32"/>
-                                        <color key="backgroundColor" red="0.95294117647058818" green="0.61176470588235299" blue="0.070588235294117646" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="32" id="6bv-Qt-Q4b"/>
-                                        </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="initialSelectedIndex">
-                                                <integer key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="segmentTitles" value="1 day, 2 weeks, 3 months, 1 year"/>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="stackViewDistribution" value="fillEqually"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="spacing">
-                                                <real key="value" value="8"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="segmentsCornerRadius">
-                                                <real key="value" value="0.0"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="selectedBackgroundColor">
-                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="selectedTextColor">
-                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="deselectedBackgroundColor">
-                                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="deselectedTextColor">
-                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
-                                                <color key="value" red="0.95294117647058818" green="0.61176470588235299" blue="0.070588235294117646" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </view>
-                                </subviews>
-                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gku-qr-a3O" customClass="LGSegmentedControl" customModule="LGSegmentedControl">
+                                <rect key="frame" x="23" y="105" width="329.5" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="initialSelectedIndex">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="segmentTitles" value="1 day, 2 weeks, 3 months, Quarter"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="stackViewDistribution" value="fill"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="spacing">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="segmentsCornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedBackgroundColor">
+                                        <color key="value" red="0.18039215689999999" green="0.54117647059999996" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedTextColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="deselectedBackgroundColor">
+                                        <color key="value" red="0.18039215689999999" green="0.54117647059999996" blue="0.96862745100000003" alpha="0.30115582190000001" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="deselectedTextColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wxO-Hk-1D2" customClass="LGSegmentedControl" customModule="LGSegmentedControl">
+                                <rect key="frame" x="73.5" y="175" width="228.5" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="initialSelectedIndex">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="segmentTitles" value="1 day, 2 weeks, 3 months"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="stackViewDistribution" value="fill"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="spacing">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="segmentsCornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedBackgroundColor">
+                                        <color key="value" red="0.18039215689999999" green="0.54117647059999996" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedTextColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="deselectedBackgroundColor">
+                                        <color key="value" red="0.1803921568627451" green="0.54117647058823526" blue="0.96862745098039216" alpha="0.30115582191780821" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="deselectedTextColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EhA-dT-GKF" customClass="LGSegmentedControl" customModule="LGSegmentedControl">
+                                <rect key="frame" x="29" y="245" width="317" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="initialSelectedIndex">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="segmentTitles" value="1 day, 2 weeks, 3 months, 1 year"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="stackViewDistribution" value="fill"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="spacing">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="segmentsCornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedBackgroundColor">
+                                        <color key="value" red="0.18823529410000001" green="0.30196078430000001" blue="0.42745098040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedTextColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="deselectedBackgroundColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="deselectedTextColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iSg-iV-pxF" customClass="LGSegmentedControl" customModule="LGSegmentedControl">
+                                <rect key="frame" x="103.5" y="315" width="168" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="initialSelectedIndex">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="segmentTitles" value="1 day, 2 weeks"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="stackViewDistribution" value="fillEqually"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="spacing">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="segmentsCornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedBackgroundColor">
+                                        <color key="value" red="0.10196078431372549" green="0.73725490196078436" blue="0.61176470588235299" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedTextColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="deselectedBackgroundColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="deselectedTextColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7JB-4I-fYi" customClass="LGSegmentedControl" customModule="LGSegmentedControl">
+                                <rect key="frame" x="29" y="385" width="317" height="30"/>
+                                <color key="backgroundColor" red="0.95294117647058818" green="0.61176470588235299" blue="0.070588235294117646" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="initialSelectedIndex">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="segmentTitles" value="1 day, 2 weeks, 3 months, 1 year"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="stackViewDistribution" value="fill"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="spacing">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="segmentsCornerRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedBackgroundColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedTextColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="deselectedBackgroundColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="deselectedTextColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                        <color key="value" red="0.95294117647058818" green="0.61176470588235299" blue="0.070588235294117646" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="7BS-tA-t3o" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="N9F-p7-oSw"/>
-                            <constraint firstItem="7BS-tA-t3o" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="RJ4-sv-6E7"/>
-                            <constraint firstItem="7BS-tA-t3o" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="dVK-Ul-Wkx"/>
+                            <constraint firstItem="7JB-4I-fYi" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="12g-6f-rn5"/>
+                            <constraint firstItem="iSg-iV-pxF" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="NK3-X0-OgN"/>
+                            <constraint firstItem="wxO-Hk-1D2" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="RO6-uj-yb1"/>
+                            <constraint firstItem="7JB-4I-fYi" firstAttribute="top" secondItem="iSg-iV-pxF" secondAttribute="bottom" constant="40" id="SEm-bK-ObW"/>
+                            <constraint firstItem="EhA-dT-GKF" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="dc7-nL-R8v"/>
+                            <constraint firstItem="gku-qr-a3O" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="85" id="eZk-Cq-fqr"/>
+                            <constraint firstItem="gku-qr-a3O" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="ltS-Ru-3cI"/>
+                            <constraint firstItem="wxO-Hk-1D2" firstAttribute="top" secondItem="gku-qr-a3O" secondAttribute="bottom" constant="40" id="mCf-us-RLe"/>
+                            <constraint firstItem="iSg-iV-pxF" firstAttribute="top" secondItem="EhA-dT-GKF" secondAttribute="bottom" constant="40" id="nwM-Xe-ztj"/>
+                            <constraint firstItem="EhA-dT-GKF" firstAttribute="top" secondItem="wxO-Hk-1D2" secondAttribute="bottom" constant="40" id="q2f-b3-ZoO"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="segmentedControl" destination="wxO-Hk-1D2" id="h3Z-Hk-Ulj"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="53.600000000000001" y="26.53673163418291"/>
         </scene>
     </scenes>
 </document>

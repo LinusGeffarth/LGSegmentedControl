@@ -22,8 +22,11 @@ class LGSegmentedControl: UIControl, LGSegmentDelegate {
     }()
     private var stackView: UIStackView = {
         let stackView = UIStackView(frame: CGRect(x: 0, y: 0, width: 150, height: 50))
-        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.axis = .horizontal
         stackView.spacing = 8
+        stackView.alignment = .fill
+        stackView.distribution = .fill
+        stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()
     
@@ -72,7 +75,8 @@ class LGSegmentedControl: UIControl, LGSegmentDelegate {
     private func commonInit() {
         addSubview(contentView)
         contentView.frame = bounds
-        contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+//        contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        contentView.translatesAutoresizingMaskIntoConstraints = false
         
         setupConstraints()
     }
@@ -95,7 +99,12 @@ class LGSegmentedControl: UIControl, LGSegmentDelegate {
         stackView.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
         stackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
         
-        contentView.layoutIfNeeded()
+        contentView.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
+        contentView.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
+        contentView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        contentView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        
+        self.layoutIfNeeded()
     }
     
     // MARK: - UI
@@ -129,7 +138,7 @@ class LGSegmentedControl: UIControl, LGSegmentDelegate {
     
     // MARK: - Customization & IBInspectables
     
-    public var distribution: UIStackView.Distribution = .fillEqually {
+    public var distribution: UIStackView.Distribution = .fill {
         didSet {
             stackView.distribution = distribution
         }
@@ -149,7 +158,7 @@ class LGSegmentedControl: UIControl, LGSegmentDelegate {
     }
     // private b/c only used for interface builder
     // `distribution` actually handles the setting
-    /// StackView distribution, may be changed to suit different segment title lengths, default: .fillEqually
+    /// StackView distribution, set to .fill to have each segment be as wide as required; set to .fillEqually, to have all segments be the same width, default: .fill
     @IBInspectable
     private var stackViewDistribution: String {
         get { return distribution.string }

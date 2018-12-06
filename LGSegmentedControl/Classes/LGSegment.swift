@@ -72,6 +72,10 @@ class LGSegment {
         
         titleLabel.centerXAnchor.constraint(equalTo: backgroundView.centerXAnchor).isActive = true
         titleLabel.centerYAnchor.constraint(equalTo: backgroundView.centerYAnchor).isActive = true
+        titleLabel.leadingAnchor.constraint(greaterThanOrEqualTo: backgroundView.leadingAnchor, constant: 12).isActive = true
+        titleLabel.trailingAnchor.constraint(greaterThanOrEqualTo: backgroundView.trailingAnchor, constant: 12).isActive = true
+        titleLabel.topAnchor.constraint(greaterThanOrEqualTo: backgroundView.topAnchor, constant: 6).isActive = true
+        titleLabel.bottomAnchor.constraint(greaterThanOrEqualTo: backgroundView.bottomAnchor, constant: 6).isActive = true
         
         tapView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
         tapView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
