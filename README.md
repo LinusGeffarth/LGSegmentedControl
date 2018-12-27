@@ -13,6 +13,7 @@
 
 - written in pure Swift 4.2
 - iOS 9.0 and higher
+- not a requirement but highly appreciated: [add your app to the list of apps using this library](#attribution)
 
 ## Installation
 
@@ -132,3 +133,9 @@ LGSegmentedControl is written and maintained by Linus Geffarth (me). If you want
 ## License
 
 LGSegmentedControl is available under the MIT license. See the LICENSE file for more info.
+
+## Attribution
+
+I get the most joy from open-sourcing knowing people use my stuff. So, if you'd like to, please add your app to the list of apps using this library:
+
+- Funeral Marketplace
