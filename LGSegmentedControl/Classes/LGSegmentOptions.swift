@@ -24,5 +24,8 @@ class LGSegmentOptions {
     /// Font of the segments' title labels
     var font: UIFont = UIFont.systemFont(ofSize: 15)
     
+    /// Background and text color of the segments' badges
+    var badgeColor: (background: UIColor, text: UIColor) = (.red, .white)
+    
     init() {  }
 }

@@ -76,3 +76,9 @@ public func ???<T>(optional: T?, defaultValue: @autoclosure () -> String) -> Str
     case nil: return defaultValue()
     }
 }
+
+extension Int {
+    var string: String {
+        return "\(self)"
+    }
+}

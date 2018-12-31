@@ -36,6 +36,8 @@ class ViewController: UIViewController {
         ]
         // make sure to set the selected index AFTER assigning the segments
         segmentedControl.selectedIndex = 1
+        
+        segmentedControl.segments.first?.badgeCount = 3
     }
     
     @IBAction func selectedSegment(_ segmentedControl: LGSegmentedControl) {
