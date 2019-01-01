@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LGSegmentedControl'
-  s.version          = '1.2'
+  s.version          = '1.2.1'
   s.summary          = 'A prettier and highly customizable UISegmentedControl'
 
 # This description is used to generate tags and improve search results.

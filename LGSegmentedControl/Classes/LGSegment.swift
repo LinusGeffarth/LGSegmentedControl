@@ -111,7 +111,7 @@ class LGSegment {
         badgeLabel.topAnchor     .constraint(equalTo: badgeView.topAnchor,      constant: 0.5).isActive = true
         badgeLabel.bottomAnchor  .constraint(equalTo: badgeView.bottomAnchor,   constant:-0.5).isActive = true
         
-        badgeView.leadingAnchor  .constraint(equalTo: titleLabel.trailingAnchor, constant: 0).isActive = true
+        badgeView.leadingAnchor  .constraint(equalTo: titleLabel.trailingAnchor, constant: -2).isActive = true
         badgeView.bottomAnchor   .constraint(equalTo: titleLabel.topAnchor     , constant:  6).isActive = true
         let badgeViewSize: CGFloat = 16
         badgeView.heightAnchor   .constraint(greaterThanOrEqualToConstant: badgeViewSize).isActive = true
@@ -129,13 +129,16 @@ class LGSegment {
     func updateAppearance(with options: LGSegmentOptions, animated: Bool? = nil) {
         self.options = options
         UIView.animate(withDuration: animated ?? options.animateStateChange ? 0.1 : 0) {
-            // status-related
+            // status
             self.titleLabel.textColor = self.textColor
             self.backgroundView.backgroundColor = self.backgroundColor
+            // badge view
+            self.badgeView.isHidden = self.badgeCount == nil
+            self.badgeView.backgroundColor = options.badgeColor.background
+            self.badgeLabel.textColor = options.badgeColor.text
             // others
             self.backgroundView.layer.cornerRadius = options.cornerRadius
             self.titleLabel.font = options.font
-            self.badgeView.isHidden = self.badgeCount == nil
         }
         badgeLabel.text = badgeCount?.string ?? ""
     }
