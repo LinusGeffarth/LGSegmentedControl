@@ -78,6 +78,25 @@ control.addTarget(self, action: #selector(selectedSegment(_:)), for: .valueChang
 }
 ```
 
+### Badge Counts
+
+You can add badge counts to segments, by assigning an `Int` value:
+
+```swift
+segment.badgeCount = 3
+```
+
+This will result in:
+
+![toggle gif](https://github.com/LinusGeffarth/LGSegmentedControl/blob/master/screenshots/toggle.gif)
+
+Note, that setting the badge to `0` will still show a badge count with a value of `0`.  
+If you want to hide a badge, simply set the count nil:
+
+```swift
+segment.badgeCount = nil
+```
+
 ## Customization
 
 You can customize many aspects of your control:
@@ -94,30 +113,30 @@ public var distribution: UIStackView.Distribution
 // Background color of the whole segment
 // default: .clear
 @IBInspectable override public var backgroundColor: UIColor?
+```
 
+### More options using `LGSegmentOptions`:
+
+```swift
 // Corner radius of the segments
 // default: 6
-@IBInspectable public var segmentsCornerRadius: CGFloat
+var cornerRadius: CGFloat
 
 // Determines whether there should be a short fade animation when selecting a segment
 // default: true
-@IBInspectable public var animateStateChange: Bool
+var animateStateChange: Bool
 
-// Background color of the selected segment
-// default: .blue-ish (#389FF9)
-@IBInspectable public var selectedBackgroundColor: UIColor
+// Background & text color of the selected segment
+// default: .blue-ish (#389FF9), .white
+var selectedColor: (background: UIColor, text: UIColor)
 
-// Text color of the selected segment
-// default: .white
-@IBInspectable public var selectedTextColor: UIColor
+// Background & text color of the deselected segment
+// default: .clear, .black
+var deselectedColor: (background: UIColor, text: UIColor)
 
-// Background color of the deselected segment
-// default: .clear
-@IBInspectable public var deselectedBackgroundColor: UIColor
-
-// Text color of the deselected segment
-// default: .black
-@IBInspectable public var deselectedTextColor: UIColor
+// Background & text color of the selected segment
+// default: .red, .white
+var badgeColor: (background: UIColor, text: UIColor)
 ```
 
 There are many different ways to style a control with given options, here is a few examples:
