@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LGSegmentedControl'
-  s.version          = '1.2.1'
+  s.version          = '1.2.1-localizable'
   s.summary          = 'A prettier and highly customizable UISegmentedControl'
 
 # This description is used to generate tags and improve search results.
@@ -29,9 +29,8 @@ LGSegmentedControl is a highly customizable and therefor prettier version of UIS
   s.social_media_url = 'https://twitter.com/linusgeffarth'
 
   s.ios.deployment_target = '9.0'
-
   s.source_files = 'LGSegmentedControl/Classes/**/*'
-  
   s.frameworks = 'UIKit'
-  
+  s.ios.dependency 'Localize', '~> 2.0.5'
+
 end
