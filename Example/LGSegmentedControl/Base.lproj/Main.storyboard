@@ -21,7 +21,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gku-qr-a3O" customClass="LGSegmentedControl" customModule="LGSegmentedControl">
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gku-qr-a3O" customClass="LGSegmentedControl" customModule="LGSegmentedControl">
                                 <rect key="frame" x="23" y="105" width="329.5" height="30"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
@@ -50,7 +50,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wxO-Hk-1D2" customClass="LGSegmentedControl" customModule="LGSegmentedControl">
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wxO-Hk-1D2" customClass="LGSegmentedControl" customModule="LGSegmentedControl">
                                 <rect key="frame" x="41" y="175" width="293" height="30"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
@@ -82,14 +82,13 @@
                                     <action selector="selectedSegment:" destination="vXZ-lx-hvc" eventType="valueChanged" id="rEZ-oV-9Bh"/>
                                 </connections>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EhA-dT-GKF" customClass="LGSegmentedControl" customModule="LGSegmentedControl">
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EhA-dT-GKF" customClass="LGSegmentedControl" customModule="LGSegmentedControl">
                                 <rect key="frame" x="29" y="245" width="317" height="30"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="initialSelectedIndex">
                                         <integer key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="segmentTitles" value="1 day, 2 weeks, 3 months, 1 year"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="stackViewDistribution" value="fill"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="spacing">
                                         <real key="value" value="8"/>
@@ -109,9 +108,10 @@
                                     <userDefinedRuntimeAttribute type="color" keyPath="deselectedTextColor">
                                         <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="segmentTitleKeys" value="segments.1day, segments.3weeks, segments.2months, segments.quarter"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iSg-iV-pxF" customClass="LGSegmentedControl" customModule="LGSegmentedControl">
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iSg-iV-pxF" customClass="LGSegmentedControl" customModule="LGSegmentedControl">
                                 <rect key="frame" x="103.5" y="315" width="168" height="30"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
@@ -140,7 +140,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7JB-4I-fYi" customClass="LGSegmentedControl" customModule="LGSegmentedControl">
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7JB-4I-fYi" customClass="LGSegmentedControl" customModule="LGSegmentedControl">
                                 <rect key="frame" x="29" y="385" width="317" height="30"/>
                                 <color key="backgroundColor" red="0.95294117647058818" green="0.61176470588235299" blue="0.070588235294117646" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <userDefinedRuntimeAttributes>

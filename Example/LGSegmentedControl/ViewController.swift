@@ -30,9 +30,9 @@ class ViewController: UIViewController {
         
         // data source
         segmentedControl.segments = [
-            LGSegment(title: "1 day"),
-            LGSegment(title: "3 weeks"),
-            LGSegment(title: "2 months")
+            LGSegment(title: "segments.1day".localized),
+            LGSegment(title: "segments.3weeks".localized),
+            LGSegment(title: "segments.2months".localized)
         ]
         // make sure to set the selected index AFTER assigning the segments
         segmentedControl.selectedIndex = 1
