@@ -2,10 +2,6 @@ use_frameworks!
 
 target 'LGSegmentedControl_Example' do
   pod 'LGSegmentedControl', :path => '../'
+  pod 'Localize', '~> 2.0.5'
 
-  target 'LGSegmentedControl_Tests' do
-    inherit! :search_paths
-
-    
-  end
 end

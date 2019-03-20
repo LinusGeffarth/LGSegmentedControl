@@ -13,6 +13,8 @@
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
+		88D365D42242A90B00AEB471 /* lang-de.json in Resources */ = {isa = PBXBuildFile; fileRef = 88D365D32242A90B00AEB471 /* lang-de.json */; };
+		88D365D62242A92E00AEB471 /* lang-en.json in Resources */ = {isa = PBXBuildFile; fileRef = 88D365D52242A92E00AEB471 /* lang-en.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		795F6619180485F16B5697AD /* Pods-LGSegmentedControl_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LGSegmentedControl_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LGSegmentedControl_Example/Pods-LGSegmentedControl_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		7E5432A7BDB5A1DE6365C71A /* Pods-LGSegmentedControl_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LGSegmentedControl_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LGSegmentedControl_Tests/Pods-LGSegmentedControl_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		88D365D32242A90B00AEB471 /* lang-de.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "lang-de.json"; sourceTree = "<group>"; };
+		88D365D52242A92E00AEB471 /* lang-en.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "lang-en.json"; sourceTree = "<group>"; };
 		A3A7B758572ED67457166216 /* Pods-LGSegmentedControl_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LGSegmentedControl_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LGSegmentedControl_Tests/Pods-LGSegmentedControl_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		C7B0DD71B27FB15063455A2C /* LGSegmentedControl.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LGSegmentedControl.podspec; path = ../LGSegmentedControl.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		DDAF5D48EF0C77FA76786C69 /* Pods_LGSegmentedControl_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LGSegmentedControl_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,6 +80,7 @@
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
+				88D365D22242A8EB00AEB471 /* localizations */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 			);
 			name = "Example for LGSegmentedControl";
@@ -126,6 +131,15 @@
 				7E5432A7BDB5A1DE6365C71A /* Pods-LGSegmentedControl_Tests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		88D365D22242A8EB00AEB471 /* localizations */ = {
+			isa = PBXGroup;
+			children = (
+				88D365D32242A90B00AEB471 /* lang-de.json */,
+				88D365D52242A92E00AEB471 /* lang-en.json */,
+			);
+			path = localizations;
 			sourceTree = "<group>";
 		};
 		AAC8B904E4A68B69CC2E3C45 /* Frameworks */ = {
@@ -198,6 +212,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88D365D42242A90B00AEB471 /* lang-de.json in Resources */,
+				88D365D62242A92E00AEB471 /* lang-en.json in Resources */,
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
@@ -215,10 +231,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-LGSegmentedControl_Example/Pods-LGSegmentedControl_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/LGSegmentedControl/LGSegmentedControl.framework",
+				"${BUILT_PRODUCTS_DIR}/Localize/Localize.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LGSegmentedControl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Localize.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

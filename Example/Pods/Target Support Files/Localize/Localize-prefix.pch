@@ -10,7 +10,3 @@
 #endif
 #endif
 
-
-FOUNDATION_EXPORT double Pods_LGSegmentedControl_TestsVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_LGSegmentedControl_TestsVersionString[];
-

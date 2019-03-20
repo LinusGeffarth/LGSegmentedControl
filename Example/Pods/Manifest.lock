@@ -1,16 +1,24 @@
 PODS:
-  - LGSegmentedControl (0.1.0)
+  - LGSegmentedControl (1.2.1):
+    - Localize (~> 2.0.5)
+  - Localize (2.0.5)
 
 DEPENDENCIES:
   - LGSegmentedControl (from `../`)
+  - Localize (~> 2.0.5)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Localize
 
 EXTERNAL SOURCES:
   LGSegmentedControl:
     :path: "../"
 
 SPEC CHECKSUMS:
-  LGSegmentedControl: 1dce4c990d4e250d84a24219670dbc9023c9c3bc
+  LGSegmentedControl: f8d702ac75a366e45fb2241bd92bc0c5ffcdeb95
+  Localize: 0fa01a98c5caf8e235cc0160984c4922aa310b61
 
-PODFILE CHECKSUM: ec1ac30586443fa7172476c0771f6dfb8c6b57b1
+PODFILE CHECKSUM: 604b4a9c1dc2a02ac9325b5e651e692790b024dc
 
 COCOAPODS: 1.5.3

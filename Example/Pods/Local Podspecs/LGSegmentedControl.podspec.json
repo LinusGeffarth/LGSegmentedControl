@@ -1,22 +1,37 @@
 {
   "name": "LGSegmentedControl",
-  "version": "0.1.0",
-  "summary": "A short description of LGSegmentedControl.",
-  "description": "TODO: Add long description of the pod here.",
+  "version": "1.2.1",
+  "summary": "A prettier and highly customizable UISegmentedControl",
+  "description": "LGSegmentedControl is a highly customizable and therefor prettier version of UISegmentedControl.",
   "homepage": "https://github.com/linusgeffarth/LGSegmentedControl",
+  "screenshots": [
+    "https://raw.githubusercontent.com/LinusGeffarth/LGSegmentedControl/master/screenshots/ss4.jpeg",
+    "https://raw.githubusercontent.com/LinusGeffarth/LGSegmentedControl/master/screenshots/ss1.png",
+    "https://raw.githubusercontent.com/LinusGeffarth/LGSegmentedControl/master/screenshots/ss2.png",
+    "https://raw.githubusercontent.com/LinusGeffarth/LGSegmentedControl/master/screenshots/ss3.png"
+  ],
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "linusgeffarth": "linus@geffarth.de"
+    "linusgeffarth": "linus@geffarth.com"
   },
   "source": {
     "git": "https://github.com/linusgeffarth/LGSegmentedControl.git",
-    "tag": "0.1.0"
+    "tag": "1.2.1"
   },
+  "social_media_url": "https://twitter.com/linusgeffarth",
   "platforms": {
-    "ios": "8.0"
+    "ios": "9.0"
   },
-  "source_files": "LGSegmentedControl/Classes/**/*"
+  "source_files": "LGSegmentedControl/Classes/**/*",
+  "frameworks": "UIKit",
+  "ios": {
+    "dependencies": {
+      "Localize": [
+        "~> 2.0.5"
+      ]
+    }
+  }
 }
