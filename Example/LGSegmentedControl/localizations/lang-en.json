@@ -1,0 +1,8 @@
+{
+    "segments": {
+        "1day": "1 day",
+        "3weeks": "3 weeks",
+        "2months": "2 months",
+        "quarter": "Quarter"
+    }
+}

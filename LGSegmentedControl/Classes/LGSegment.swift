@@ -117,7 +117,7 @@ class LGSegment {
         badgeView.heightAnchor   .constraint(greaterThanOrEqualToConstant: badgeViewSize).isActive = true
         badgeView.widthAnchor    .constraint(greaterThanOrEqualToConstant: badgeViewSize).isActive = true
         badgeView.layer.cornerRadius = badgeViewSize/2
-
+        
         tapView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
         tapView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
         tapView.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true

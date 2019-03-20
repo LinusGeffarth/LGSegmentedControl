@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Localize
 
 protocol LGSegmentDelegate {
     func didSelect(_ segment: LGSegment)
@@ -145,14 +146,18 @@ class LGSegmentedControl: UIControl, LGSegmentDelegate {
     
     @IBInspectable
     private var segmentTitles: String {
-        get {
-            return segments.reduce("", { (result, element) in
-                return result + ", " + (element.title ?? "")
-            })
-        }
+        get { return segments.map { $0.title ?? "" }.joined(separator: ", ") }
         set {
             let titles = newValue.components(separatedBy: ",").map { $0.trimmingCharacters(in: .whitespacesAndNewlines) }
             segments = titles.map { LGSegment(title: $0) }
+        }
+    }
+    @IBInspectable
+    private var segmentTitleKeys: String {
+        get { return segments.map { $0.title ?? "" }.joined(separator: ", ") }
+        set {
+            let titles = newValue.components(separatedBy: ",").map { $0.trimmingCharacters(in: .whitespacesAndNewlines) }
+            segments = titles.map { LGSegment(title: $0.localized) }
         }
     }
     // private b/c only used for interface builder
