@@ -137,6 +137,10 @@ var deselectedColor: (background: UIColor, text: UIColor)
 // Background & text color of the selected segment
 // default: .red, .white
 var badgeColor: (background: UIColor, text: UIColor)
+
+// Font of the titleLabel
+// default: .systemFont(ofSize: 15)
+var font: UIFont
 ```
 
 There are many different ways to style a control with given options, here is a few examples:
