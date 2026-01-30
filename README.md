@@ -154,7 +154,7 @@ If you want to contribute changes and features, please [open a pull request](htt
 
 ## Author
 
-LGSegmentedControl is written and maintained by Linus Geffarth (me). If you want to say hi, reach out to me via twitter [@linusgeffarth](https://twitter.com/linusgeffarth), or email [linus@geffarth.com](mailto:linus@geffarth.com).
+LGSegmentedControl is written and maintained by Linus Geffarth.
 
 ## License
 
